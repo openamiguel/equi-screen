@@ -194,7 +194,7 @@ def main():
 	outfile.write("[\n")
 	
 	# Builds JSON term for each symbol
-	time_start = time.time()
+	time_start0 = time.time()
 	for symbol in symbols:
 		print("Starting symbol {}...".format(symbol))
 		# Start the timer
@@ -216,8 +216,8 @@ def main():
 		print("Symbol {0} done in time {1:.3f} sec!".format(symbol, time_elapsed))
 	outfile.write("]")
 	outfile.close()
-	time_end = time.time()
-	time_elapsed = time_end - time_start
+	time_end0 = time.time()
+	time_elapsed = time_end0 - time_start0
 	print("Entire process done in time {0:.3f} sec!".format(time_elapsed))
 
 if __name__ == "__main__":
