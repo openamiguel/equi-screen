@@ -62,6 +62,8 @@ def get_financials(symbol):
 	try: 
 		industry_name = first_line[first_line.index("industry_name") + 16:]
 		industry_name = industry_name[:industry_name.index("\"")]
+		# Remove annoying single quotes!
+		industry_name = industry_name.replace("\'", "")
 	except ValueError:
 		print("Industry name for symbol {} not found".format(symbol))
 	return company_name, location, industry_name
